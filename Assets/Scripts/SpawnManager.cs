@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject feedBar;
+    //public GameObject feedBar;
     public GameObject[] animalPrefabs;
     private float spawnZ = 20;
     private float spawnRangeX = 10;
@@ -49,7 +49,7 @@ public class SpawnManager : MonoBehaviour
             Quaternion spawnrot = animalPrefabs[animalIndex].transform.rotation;
             Instantiate(animalPrefabs[animalIndex], spawnPos, spawnrot);
             animalSpeed = animalPrefabs[animalIndex].GetComponent<MoveForward>().speed;
-            Canvas.Instantiate(feedBar, spawnPos, spawnrot);
+            //Canvas.Instantiate(feedBar, spawnPos, spawnrot);
         }
         else if (side == 1) // from left
         {
@@ -60,7 +60,7 @@ public class SpawnManager : MonoBehaviour
                 animalPrefabs[animalIndex].transform.rotation.z);
             Instantiate(animalPrefabs[animalIndex], spawnPos, spawnrot);
             animalSpeed = animalPrefabs[animalIndex].GetComponent<MoveForward>().speed;
-            Canvas.Instantiate(feedBar, spawnPos, spawnrot);
+            //Canvas.Instantiate(feedBar, spawnPos, spawnrot);
         }
         else // from right
         {
@@ -71,7 +71,7 @@ public class SpawnManager : MonoBehaviour
                 animalPrefabs[animalIndex].transform.rotation.z);
             Instantiate(animalPrefabs[animalIndex], spawnPos, spawnrot);
             animalSpeed = animalPrefabs[animalIndex].GetComponent<MoveForward>().speed;
-            Canvas.Instantiate(feedBar, spawnPos, spawnrot);
+            //Canvas.Instantiate(feedBar, spawnPos, spawnrot);
         }
     }
 }

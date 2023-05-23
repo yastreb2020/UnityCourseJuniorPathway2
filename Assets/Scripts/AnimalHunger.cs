@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AnimalHunger : MonoBehaviour
 {
     public Slider hungerslider;
-    public int amountToBeFed;
+    [SerializeField] private int amountToBeFed;
 
     private int currentFedAmount = 0;
     private SpawnManager spawnManager;
